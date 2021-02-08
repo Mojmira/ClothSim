@@ -37,15 +37,15 @@ public class MeshTest : MonoBehaviour
         for (var i = 0; i < triangles.Length; i+=3) {
 
             tmp = new Vector2(Mathf.Max(triangles[i], triangles[i + 1]), Mathf.Min(triangles[i], triangles[i + 1]));
-            if (links.ContainsKey(tmp))            
+            if (!links.ContainsKey(tmp))            
                 links.Add(tmp, (vertices[triangles[i]] - vertices[triangles[i + 1]]).magnitude);
 
             tmp = new Vector2(Mathf.Max(triangles[i], triangles[i + 2]), Mathf.Min(triangles[i], triangles[i + 2]));
-            if (links.ContainsKey(tmp))
+            if (!links.ContainsKey(tmp))
                 links.Add(tmp, (vertices[triangles[i]] - vertices[triangles[i + 2]]).magnitude);
 
             tmp = new Vector2(Mathf.Max(triangles[i+1], triangles[i + 2]), Mathf.Min(triangles[i], triangles[i + 1]));
-            if (links.ContainsKey(tmp))
+            if (!links.ContainsKey(tmp))
                 links.Add(tmp, (vertices[triangles[i+1]] - vertices[triangles[i + 2]]).magnitude);
         }
 
