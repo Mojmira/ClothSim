@@ -1354,7 +1354,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StopAnimation
+          m_StringArgument: RestartAnimation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1108922677
@@ -1836,6 +1836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothPool: {fileID: 2029148334}
+  mediator: {fileID: 804494057}
 --- !u!4 &1443760000
 Transform:
   m_ObjectHideFlags: 0

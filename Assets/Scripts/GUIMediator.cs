@@ -13,9 +13,12 @@ public class GUIMediator : MonoBehaviour, Mediator
     {
         switch (eventMsg)
         {
-            case "StopAnimation":
+            case "RestartAnimation":
                 anim.StopAnimation();
                 spawner.RemoveLastSpawned();
+                break;
+            case "StopAnimation":
+                anim.StopAnimation();
                 break;
             case "PlayAnimation":
                 anim.PlayAnimation();
@@ -25,15 +28,12 @@ public class GUIMediator : MonoBehaviour, Mediator
                 break;
             case "Spawn0":
                 spawner.Spawn(0);
-                anim.StopAnimation();
                 break;
             case "Spawn1":
                 spawner.Spawn(1);
-                anim.StopAnimation();
                 break;
             case "Spawn2":
                 spawner.Spawn(2);
-                anim.StopAnimation();
                 break;
         }
     }
