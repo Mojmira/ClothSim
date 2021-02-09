@@ -6,10 +6,15 @@ public class AnimatorController : MonoBehaviour
 {
     private Animator anim;
 
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
     }
 
     // Update is called once per frame
@@ -30,7 +35,8 @@ public class AnimatorController : MonoBehaviour
 
     public void StopAnimation()
     {
-        // call mediator to reset model transform to initial
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
         anim.Play("Idle", -1, 0f);
         this.PauseAnimation();
     }

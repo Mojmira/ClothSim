@@ -13,12 +13,21 @@ public class ClothSpawner : MonoBehaviour
     {
         if (!lastSpawned || lastSpawned.number != number)
         {
-            if (lastSpawned)
-                clothPool.ReturnToPool(lastSpawned);
+            RemoveLastSpawned();
 
             PoolableCloth instance = clothPool.GetPrefabInstance(number);
             instance.transform.position = transform.position; // set instance transform position to model position
             lastSpawned = instance;
+        }
+
+    }
+
+    public void RemoveLastSpawned()
+    {
+        if (lastSpawned)
+        {
+            clothPool.ReturnToPool(lastSpawned);
+            lastSpawned = null;
         }
 
     }
