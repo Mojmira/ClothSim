@@ -9,6 +9,7 @@ public class ClothPool : MonoBehaviour
     private PoolableCloth [] prefabs;
 
     // References to reusable instances
+    [SerializeField]
     private PoolableCloth [] reusableInstances = new PoolableCloth[3];
 
     // returns instance of prefab

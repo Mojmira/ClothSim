@@ -20,7 +20,7 @@ public class ClothSpawner : MonoBehaviour
             mediator.notify("StopAnimation");
 
             PoolableCloth instance = clothPool.GetPrefabInstance(number);
-            instance.transform.position = transform.position; // set instance transform position to model position
+            //instance.transform.position = transform.position; // set instance transform position to model position
             lastSpawned = instance;
         }
 
