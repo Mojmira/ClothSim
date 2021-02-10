@@ -128,7 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 0
-  parent: {fileID: 0}
 --- !u!183 &6795266559123057269
 Cloth:
   m_ObjectHideFlags: 0
@@ -7131,7 +7130,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3033667219593020291, guid: 3fd41b6e968b9b24889c931f5d41060e, type: 3}
+  - {fileID: 2100000, guid: 668f0f46d78f6054fbdd0caa068fc9bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
