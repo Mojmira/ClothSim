@@ -530,7 +530,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ba8851000edf55745bb92024c8229f4d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba8851000edf55745bb92024c8229f4d, type: 3}
@@ -18510,7 +18510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &628590900
 Light:
   m_ObjectHideFlags: 0
@@ -18987,6 +18987,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1751909601}
   spawner: {fileID: 1443759999}
+  sliderD: {fileID: 879018599}
+  sliderS: {fileID: 1423109261}
 --- !u!4 &804494058
 Transform:
   m_ObjectHideFlags: 0
@@ -19064,7 +19066,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -19078,7 +19080,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 93620058}
   m_FillRect: {fileID: 2015393654}
   m_HandleRect: {fileID: 93620057}
@@ -19089,7 +19091,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 804494057}
+        m_TargetAssemblyTypeName: GUIMediator, Assembly-CSharp
+        m_MethodName: notify
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Damping
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &908104113
 GameObject:
   m_ObjectHideFlags: 0
@@ -20352,7 +20366,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -20366,7 +20380,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1302245493}
   m_FillRect: {fileID: 1082452594}
   m_HandleRect: {fileID: 1302245492}
@@ -20377,7 +20391,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 804494057}
+        m_TargetAssemblyTypeName: GUIMediator, Assembly-CSharp
+        m_MethodName: notify
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Size
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &1429684594 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 1701546730858055019, guid: c67d624173355fb4ebeef82d7ff362ef,
@@ -20414,7 +20440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothPool: {fileID: 2029148334}
-  mediator: {fileID: 804494057}
+  lastSpawned: {fileID: 0}
 --- !u!4 &1443760000
 Transform:
   m_ObjectHideFlags: 0
