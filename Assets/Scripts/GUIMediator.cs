@@ -23,8 +23,8 @@ public class GUIMediator : MonoBehaviour, Mediator
         {
             case "RestartAnimation":
                 anim.StopAnimation();
-                spawner.RemoveLastSpawned();
                 ResetSliders();
+                spawner.RemoveLastSpawned();
                 DisableSliders();
                 break;
             case "StopAnimation":
@@ -41,23 +41,23 @@ public class GUIMediator : MonoBehaviour, Mediator
                 break;
             case "Spawn0":
                 anim.StopAnimation();
+                ResetSliders();
                 spawner.Spawn(0);
                 state = new CapeState(spawner);
-                ResetSliders();
                 ActivateSliders();
                 break;
             case "Spawn1":
                 anim.StopAnimation();
+                ResetSliders();
                 spawner.Spawn(1);
                 state = new ChitonState(spawner);
-                ResetSliders();
                 ActivateSliders();
                 break;
             case "Spawn2":
                 anim.StopAnimation();
+                ResetSliders();
                 spawner.Spawn(2);
                 state = new HatState(spawner);
-                ResetSliders();
                 ActivateSliders();
                 break;
             case "Damping":
