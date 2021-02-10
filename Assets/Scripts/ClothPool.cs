@@ -9,7 +9,6 @@ public class ClothPool : MonoBehaviour
     private PoolableCloth [] prefabs;
 
     // References to reusable instances
-    [SerializeField]
     private PoolableCloth [] reusableInstances = new PoolableCloth[3];
 
     // returns instance of prefab
@@ -24,7 +23,8 @@ public class ClothPool : MonoBehaviour
         }
         else
         {
-            instance = Instantiate(prefabs[number]);
+            instance = Instantiate(prefabs[number], PoolableCloth.GetParentTransform(number));
+            instance.AttachColliders();
         }
         return instance;
     }
